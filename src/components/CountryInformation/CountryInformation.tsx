@@ -33,15 +33,20 @@ const CountryInformation: React.FC<Props> = ({countryInf}) => {
     }
   }, [countryInf, fetchData]);
 
-  return (
+  return countryInf && (
     <div className="CountryInformation">
-      <p>{countryInf?.name}</p>
-      <p>{countryInf?.capital}</p>
-      <p>{countryInf?.population}</p>
-      <h1>borders</h1>
-      {inf.map(item => {
-        return <BordersCountries name={item.name} key={Math.random()}/>
-      })}
+      <img src={countryInf?.flags.png} className="imgFlag" alt={countryInf?.name}/>
+      <div className="infBox">
+        <p>Country name: <span className="infSpan">{countryInf?.name}</span></p>
+        <p>Capital: <span className="infSpan">{countryInf?.capital}</span></p>
+        <p>Population: <span className="infSpan">{countryInf?.population}</span></p>
+        <p>Borders:</p>
+        <div className="borders">
+          {inf.map(item => {
+            return <BordersCountries name={item.name} key={Math.random()}/>
+          })}
+        </div>
+      </div>
     </div>
   );
 };

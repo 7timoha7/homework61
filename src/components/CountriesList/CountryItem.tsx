@@ -2,14 +2,14 @@ import React, {MouseEventHandler} from 'react';
 
 interface Props {
   name: string;
-  onClick:MouseEventHandler;
+  onClick: MouseEventHandler;
 }
 
 const CountryItem: React.FC<Props> = ({name, onClick}) => {
   return (
-    <>
-      <p onClick={onClick}>{name}</p>
-    </>
+    <div>
+      <p className="itemCountry" onClick={onClick}>{name}</p>
+    </div>
   );
 };
 

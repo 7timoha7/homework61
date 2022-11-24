@@ -12,7 +12,11 @@ const CountriesList: React.FC<Props> = ({country, onClick}) => {
   return (
     <div className="countriesList">
       {country.map((item) => {
-        return <CountryItem onClick={() => onClick(item.alpha3Code)} name={item.name} key={Math.random().toString()}/>
+        return <CountryItem
+          onClick={() => onClick(item.alpha3Code)}
+          name={item.name}
+          key={Math.random().toString()}
+        />
       })}
     </div>
   );

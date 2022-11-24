@@ -9,5 +9,8 @@ export interface CountryInfType {
   capital: string
   population: string;
   borders: string[];
-  flags: string;
+  flags: {
+    svg: string;
+    png: string;
+  };
 }
