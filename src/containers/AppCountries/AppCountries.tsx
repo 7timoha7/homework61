@@ -14,7 +14,6 @@ const AppCountries = () => {
   const [countryInf, setCountryInf] = useState<CountryInfType | null>(null);
 
 
-
   const fetchData = useCallback(async () => {
     const countryResponse = await axios.get(urlCountries);
     const CountryList: CountryListType[] = countryResponse.data
@@ -44,7 +43,7 @@ const AppCountries = () => {
   return (
     <div className="AppCountries">
       <CountriesList onClick={onClickCountry} country={countryList}/>
-      <CountryInformation/>
+      <CountryInformation countryInf={countryInf}/>
     </div>
   );
 };

@@ -1,3 +1,10 @@
 .AppCountries{
     display: flex;
+    justify-content: space-between;
+    margin: -10px;
+    background: gray;
+    padding: 15px;
+    background: url("https://phonoteka.org/uploads/posts/2021-07/1625520400_6-phonoteka-org-p-zastavka-na-rabochii-stol-karta-mira-krasi-6.jpg") no-repeat;
+    background-size: auto;
+    color: white;
 }

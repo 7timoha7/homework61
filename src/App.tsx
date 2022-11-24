@@ -3,9 +3,9 @@ import AppCountries from "./containers/AppCountries/AppCountries";
 
 function App() {
   return (
-    <>
+    <div className="App">
       <AppCountries/>
-    </>
+    </div>
   );
 }
 
